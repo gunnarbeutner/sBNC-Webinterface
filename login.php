@@ -16,7 +16,7 @@
 		
 		unset($sbnc);
 		
-		header('Location: http://'.$_SERVER['HTTP_HOST'].$path.'/user.php', true, 307);
+		header('Location: http://'.$_SERVER['HTTP_HOST'].$path.'/user_index.php', true, 307);
 	} else {
 		header('Location: http://'.$_SERVER['HTTP_HOST'].$path.'/', true, 307);
 	}
