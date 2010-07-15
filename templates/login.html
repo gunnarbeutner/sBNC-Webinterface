@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="de" dir="ltr">
+<head>
+	<title>sBNC Webinterface at <?php echo $_SERVER['SERVER_NAME']; ?></title>
+	
+	<meta http-equiv="Content-Type" content="text/html; Charset=utf-8">
+	
+	<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body>
+	<div id="login">
+		<header>
+			<h1>s<span>BNC W</span>ebinterface</h1>
+		</header>
+		
+		<form action="login.php" method="post">
+			<fieldset>
+				<legend>Login</legend>
+			
+				<label for="user">Username</label>
+				<input type="text" name="user" id="user" value="" required placeholder="sBNC Username" class="input"><br>
+			
+				<label for="pass">Password</label>
+				<input type="password" name="pass" id="pass" value="" required placeholder="sBNC Password" class="input"><br>
+							
+				<input type="submit" value="Login" id="submit" class="submit"><br />
+			</fieldset>
+		</form>
+		
+		<footer>
+			<p><a href="http://github.com/Kunsi/sBNC-Webinterface">sBNC Webinterface</a> by <a href="http://felix-kunsmann.de/">Felix 'Kunsi' Kunsmann</a></p>
+		</footer>
+	</div>
+</body>
+</html>
