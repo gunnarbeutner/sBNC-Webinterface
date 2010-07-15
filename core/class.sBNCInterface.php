@@ -19,33 +19,41 @@
 				Error::failure('Connection failure', array('Could not connect to server:', socket_strerror(socket_last_error())));
 				
 				$this->connection = false;
+				
+				return false;
 			} else {
 				$this->write("RPC_IFACE");
 				
-				$line = $this->read();
-				
-				if (strstr($line, "[RPC_BLOCK]") !== FALSE) {
-					Error::failure('IP blocked', array('This IP ('.$_SERVER['SERVER_ADDR'].') is blocked.'));
+				while($line = $this->read()) {
+					if (stripos($line, "rpc_iface_ok") !== FALSE) {
+						break;
+					}
+					
+					if (stripos($line, "[rpc_block]") !== FALSE) {
+						Error::failure('IP blocked', array('This IP ('.$_SERVER['SERVER_ADDR'].') is blocked.'));
+					}
 				}
 				
-				if (strpos($line, "RPC_IFACE_OK") !== FALSE) {
-					return true;
-				}
+				return true;
 			}
 		}
 		
 		public function __destruct() {
 			socket_write($this->connection, 'QUIT'."\n");
 			
-			usleep(500);
-			
 			socket_close($this->connection);
 		}
 		
 		private function read() {
-			$line = socket_read($this->connection, 128000, PHP_NORMAL_READ);
-			
-			$line = trim($line);
+			do {
+				$line = socket_read($this->connection, 128000, PHP_NORMAL_READ);
+				
+				if (strlen($line) == 0) {
+					return false;
+				}
+				
+				$line = str_replace(array("\r", "\n"), '', $line);
+			} while ($line == '');
 			
 			return $line;
 		}
@@ -78,21 +86,29 @@
 	
 			if ($response === false) {
 				Error::warn('Connection failure', array('Could not read from server', socket_strerror(socket_last_error())));
+				
+				return false;
 			}
+			
+			var_dump($response);
 			
 			$parsedResponse = $this->itype->parse($response);
 	
 			if ($parsedResponse[0] == 'empty') {
 				Error::warn('Connection failure', array('Could not parse data delivered by server', $line));
+				
+				return false;
 			}
 	
-			$response = itype_flat($parsedResponse);
+			$response = $this->itype->flat($parsedResponse);
 	
 			if (is_a($response, 'itype_exception')) {
 				$code = $response->getCode();
 	
 				if ($code != 'RPC_ERROR') {
 					Error::warn('Connection failure', array('Could not parse data delivered by server', '[' . $code . '] ' . $response->getMessage()));
+					
+					return false;
 				}
 			}
 	
