@@ -24,7 +24,7 @@
 				
 				$line = $this->read();
 				
-				if (strstr($line, "[RPC_BLOCK]") != FALSE) {
+				if (strstr($line, "[RPC_BLOCK]") !== FALSE) {
 					Error::failure('IP blocked', array('This IP ('.$_SERVER['SERVER_ADDR'].') is blocked.'));
 				}
 				
@@ -47,7 +47,7 @@
 			
 			$line = trim($line);
 			
-			return $line
+			return $line;
 		}
 		
 		private function write($text) {
