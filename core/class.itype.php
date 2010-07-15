@@ -30,7 +30,7 @@
 				$empty = true;
 		
 				foreach ($value as $item) {
-					$ret .= itype_fromphp($item);
+					$ret .= $this->fromphp($item);
 				}
 		
 				$ret .= '}';
@@ -171,7 +171,7 @@
 							$listData = array();
 		
 							while ($dataString != '') {
-								$innerData = itype_parse($dataString);
+								$innerData = $this->parse($dataString);
 		
 								if ($innerData[0] == 'empty') {
 									break;
@@ -197,7 +197,7 @@
 				$listItems = array();
 		
 				foreach ($value[1] as $item) {
-					array_push($listItems, itype_flat($item));
+					array_push($listItems, $this->flat($item));
 				}
 		
 				return $listItems;

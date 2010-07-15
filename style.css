@@ -1,5 +1,17 @@
 body {
-	font-family: Verdana, Arial, sans-serif;
+	font-family:Verdana, Arial, sans-serif;
+	line-height:1.5em;
+}
+
+a:link, a:visited, span.link{
+	color:#800000;
+	text-decoration:none;
+	border-bottom:1px dotted #CCCCCC;
+}
+
+a:hover, a:active, a:focus, span.link:hover{
+	color:#800000;
+	border-bottom:1px solid #CCCCCC;
 }
 
 *:focus{
@@ -46,8 +58,8 @@ input.input:required {
 
 input.submit {
 	padding:5px;
-	width:240px;
-	background:url("img/pfeil.png") #FFFFFF no-repeat 210px 7px;	
+	width:150px;
+	background:url("img/pfeil.png") #FFFFFF no-repeat 120px 7px;	
 	text-align:left;
 }
 
@@ -66,4 +78,27 @@ label{
 	font-weight:bolder;
 	font-size:1.2em;
 	display:block;
+}
+
+h1{
+	text-align:center;
+	margin:0px 0px 25px 0px;
+	padding:0px;
+	line-height:1em;
+	font-size:2em;
+}
+
+footer{
+	text-align:center;
+}
+
+#login{
+	margin:100px auto;
+	border:1px solid #CCCCCC;
+	width:310px;
+	padding:10px;
+	
+	-webkit-border-radius:10px;
+	-moz-border-radius:10px;
+	border-radius:10px;
 }
