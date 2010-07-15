@@ -1,8 +1,8 @@
 <?php
 	$LANG = array(
 			'menu_logout' => 'Abmelden',
-			'menu_index' => 'Übersicht',
-			'menu_password' => 'Passwort ändern',
+			'menu_index' => 'Ãœbersicht',
+			'menu_password' => 'Passwort Ã¤ndern',
 			'menu_settings' => 'Einstellungen',
 			'menu_traffic' => 'Traffic',
 			'menu_log' => 'Awaylog',
@@ -14,23 +14,23 @@
 			'index_traffic' => 'Du hast bisher %s eingehenden Traffic und %s ausgehenden Traffic verursacht.',
 			'index_status' => 'Online-Status',
 			'index_statusimage' => 'Um in Foren, Blogs etc. deinen Onlinestatus im IRC anzuzeigen, kannst du folgende Grafik verwenden: <img src="/status/%s.gif" alt="Online-Status von %s" />',
-			'index_channels' => 'Kanäle',
+			'index_channels' => 'KanÃ¤le',
 			
 			'settings_awaynick' => 'Awaynick',
-			'settings_awaynick_changed' => 'Der Awaynick wurde auf <strong>%s</strong> geändert.',
+			'settings_awaynick_changed' => 'Der Awaynick wurde auf <strong>%s</strong> geÃ¤ndert.',
 			'settings_away' => 'Abwesenheitsnachricht',
-			'settings_away_changed' => 'Die Abwesenheitsnachricht wurde auf <strong>%s</strong> geändert.',
+			'settings_away_changed' => 'Die Abwesenheitsnachricht wurde auf <strong>%s</strong> geÃ¤ndert.',
 			'settings_nickserv' => 'NickServ',
 			'settings_nick' => 'Nickname',
-			'settings_nick_changed' => 'Der Nickname wurde auf <strong>%s</strong> geändert.',
+			'settings_nick_changed' => 'Der Nickname wurde auf <strong>%s</strong> geÃ¤ndert.',
 			'settings_password' => 'Passwort',
 			'settings_password_repeat' => 'Passwort wiederholen',
-			'settings_password_changed' => 'Das Passwort wurde auf <strong>%s</strong> geändert.',
+			'settings_password_changed' => 'Das Passwort wurde auf <strong>%s</strong> geÃ¤ndert.',
 			
-			'log_erased' => 'Das Log wurde gelöscht.',
+			'log_erased' => 'Das Log wurde gelÃ¶scht.',
 			'log_prompt' => 'Log leeren',
 			
-			'lang_changed' => 'Sprache geändert',
-			'lang_changed_text' => 'Die Sprache wurde auf <strong>Deutsch</strong> geändert.'
+			'lang_changed' => 'Sprache geÃ¤ndert',
+			'lang_changed_text' => 'Die Sprache wurde auf <strong>Deutsch</strong> geÃ¤ndert.'
 		);
 ?>
