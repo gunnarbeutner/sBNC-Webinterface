@@ -14,7 +14,7 @@
 		public static function warn($title, $messages) {
 			echo '
 <div style="border:1px solid #FF4400; margin:15px 100px; padding:5px; color:#000000;">
-	<h1 style="background-color:#80000; color:#FFFFFF; font-size:16px; margin:0px 0px 15px 0px; padding:5px;">'.$title.'</h1>';
+	<h1 style="background-color:#800000; color:#FFFFFF; font-size:16px; margin:0px 0px 15px 0px; padding:5px;">'.$title.'</h1>';
 			
 			foreach ($messages as $msg) {
 				echo '

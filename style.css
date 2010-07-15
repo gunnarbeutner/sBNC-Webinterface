@@ -1,0 +1,69 @@
+body {
+	font-family: Verdana, Arial, sans-serif;
+}
+
+*:focus{
+	outline:none; /* Prevents blue border in Webkit */
+}
+
+input, select {
+	font-family: Verdana, Arial, sans-serif;
+	background-color:#FFFFFF;
+	border:1px solid #CCCCCC;
+	font-size:1em;
+	width:300px;
+	min-height:20px;
+	display:block;
+	margin:8px 0px 16px 0px;
+	padding:5px;
+	
+	-webkit-border-radius:5px;
+	-moz-border-radius:5px;
+	border-radius:5px;
+	
+	-webkit-transition: all 0.5s ease-in-out;
+	-moz-transition: all 0.5s ease-in-out;
+	transition: all 0.5s ease-in-out;
+}
+
+input.input:focus {
+	-webkit-box-shadow:0 0 25px #CCCCCC;
+	-moz-box-shadow:0 0 25px #CCCCCC;
+	box-shadow:0 0 25px #CCCCCC;
+	
+	-webkit-transform: scale(1.05);
+	-moz-transform: scale(1.05);
+	transform: scale(1.05);
+}
+
+input.input:not(:focus) {
+	opacity:0.5;
+}
+
+input.input:required {
+	background:url("img/asterisk_orange.png") #FFFFFF no-repeat 280px 7px;						
+}
+
+input.submit {
+	padding:5px;
+	width:240px;
+	background:url("img/pfeil.png") #FFFFFF no-repeat 210px 7px;	
+	text-align:left;
+}
+
+fieldset{
+	border:none;
+	padding:0px;
+	margin:0px;
+}
+
+legend{
+	display:none;
+}
+
+label{
+	color:#800000;
+	font-weight:bolder;
+	font-size:1.2em;
+	display:block;
+}
