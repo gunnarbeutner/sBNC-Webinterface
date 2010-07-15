@@ -29,7 +29,7 @@
 						break;
 					}
 					
-					if (stripos($line, "[rpc_block]") !== FALSE) {
+					if (stripos($line, "rpc_block") !== FALSE) {
 						Error::failure('IP blocked', array('This IP ('.$_SERVER['SERVER_ADDR'].') is blocked.'));
 					}
 				}
@@ -90,8 +90,6 @@
 				return false;
 			}
 			
-			var_dump($response);
-			
 			$parsedResponse = $this->itype->parse($response);
 	
 			if ($parsedResponse[0] == 'empty') {
@@ -103,13 +101,7 @@
 			$response = $this->itype->flat($parsedResponse);
 	
 			if (is_a($response, 'itype_exception')) {
-				$code = $response->getCode();
-	
-				if ($code != 'RPC_ERROR') {
-					Error::warn('Connection failure', array('Could not parse data delivered by server', '[' . $code . '] ' . $response->getMessage()));
-					
-					return false;
-				}
+				$response = $response->getCode();
 			}
 	
 			return $response;
@@ -119,7 +111,9 @@
 			$this->user = $user;
 			$this->pass = $pass;
 			
-			if ($this->call('commands') != 'RPC_INVALIDUSERPASS') {
+			$call = $this->call('commands');
+			
+			if ($call != 'RPC_INVALIDUSERPASS') {
 				return true;
 			} else {
 				$this->user = '';
