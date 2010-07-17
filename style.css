@@ -63,6 +63,10 @@ input.submit {
 	text-align:left;
 }
 
+input.submit:hover, input.submit:focus {
+	border:1px solid #FF4400;
+}
+
 fieldset{
 	border:none;
 	padding:0px;
@@ -86,6 +90,10 @@ h1{
 	padding:0px;
 	line-height:1.2em;
 	font-size:2em;
+}
+
+h1 span{
+	color:#0044FF;
 }
 
 h2{
@@ -137,22 +145,43 @@ nav li a:link, nav li a:visited{
 	-webkit-box-shadow:0 0 25px #CCCCCC;
 	-moz-box-shadow:0 0 25px #CCCCCC;
 	box-shadow:0 0 25px #CCCCCC;
+		
+	-webkit-transition: all 0.2s ease-in-out;
+	-moz-transition: all 0.2s ease-in-out;
+	transition: all 0.2s ease-in-out;
 }
 
 nav li a:hover, nav li a:active, nav li a:focus{
-	border:1px solid #FF4400;
+	border:1px solid #999999;
 	
 	-webkit-border-radius:5px;
 	-moz-border-radius:5px;
 	border-radius:5px;
 	
-	-webkit-box-shadow:0 0 25px #FF4400;
-	-moz-box-shadow:0 0 25px #FF4400;
-	box-shadow:0 0 25px #FF4400;
+	-webkit-box-shadow:0 0 25px #999999;
+	-moz-box-shadow:0 0 25px #999999;
+	box-shadow:0 0 25px #999999;
 }
 
 nav br{
 	clear:both;
+}
+
+dt{
+	display:block;
+	width:12em;
+	font-weight:bolder;
+	float:left;
+	text-align:right;
+}
+
+dt:after{
+	content:":";
+}
+
+dd{
+	display:block;
+	margin-left:12.3em;
 }
 
 #content{
