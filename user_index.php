@@ -28,10 +28,8 @@
 					require 'lang/'.$_SESSION['language'].'.php';
 					require_once 'templates/header.html';
 ?>
-						<div class="settings saved">
-							<h3><?php echo $LANG['lang_changed']; ?></h3>
-							<p><?php echo $LANG['lang_changed_text']; ?></p>
-						</div>
+					<h3><?php echo $LANG['lang_changed']; ?></h3>
+					<p><?php echo $LANG['lang_changed_text']; ?></p>
 <?php
 				} else {
 					require_once 'templates/header.html';
@@ -40,20 +38,27 @@
 					<h3><?php printf($LANG['index_welcome'], $nick); ?></h3>
 					
 					<p><?php printf($LANG['index_uptime'], Func::duration($sbnc->call("getvalue", array("uptime")))); ?> <?php printf($LANG['index_nick'], $nick, $awaynick); ?> <?php printf($LANG['index_server'], $server); ?></p>
-					<p><?php printf($LANG['index_traffic'], Func::byte_format($traff[2]+$traff[0]), Func::byte_format($traff[3]+$traff[1]) ); ?></p>
+					<p><?php printf($LANG['index_traffic'], Func::byte_format($traffic[2]+$traffic[0]), Func::byte_format($$traffic[3]+$traffic[1]) ); ?></p>
+<?php
+				$channels = $sbnc->call("getchannels");
+				if (is_array($channels)) {
+?>
 					
 					<h3><?php echo $LANG['index_channels']; ?></h3>
 					<ul>
 <?php
-				foreach($sbnc->call("getchannels") as $channel) {
+					foreach($sbnc->call("getchannels") as $channel) {
 ?>
 						<li><?php echo $channel; ?></li>
 <?php
-				}
+					}
 ?>
 					</ul>
+<?php
+				}
+?>
 					
-					<form action="/<?php echo $_SESSION['sbnc_user']; ?>/index.html" method="post">
+					<form action="user_index.php" method="post">
 						<fieldset>
 							<legend>Set Language</legend>
 							
