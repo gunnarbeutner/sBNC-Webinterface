@@ -2,9 +2,8 @@
 	$LANG = array(
 			'menu_logout' => 'Logout',
 			'menu_index' => 'Index',
-			'menu_password' => 'Change password',
 			'menu_settings' => 'Settings',
-			'menu_traffic' => 'Traffic',
+			'menu_admin' => 'Admin',
 			'menu_log' => 'Awaylog',
 			
 			'index_welcome' => 'Welcome, %s!',
@@ -12,8 +11,6 @@
 			'index_nick' => 'Your current Nick is <strong>%s</strong>, Awaynick is <strong>%s</strong>.',
 			'index_server' => 'You are connected to Server <strong>%s</strong>.',
 			'index_traffic' => 'Traffic: Incoming %s, Outgoing %s',
-			'index_status' => 'Online-Status',
-			'index_statusimage' => 'You are able to show your Status using the following image: <img src="/status/%s.gif" alt="Online-Status of %s" />',
 			'index_channels' => 'Channels',
 			
 			'settings_awaynick' => 'Awaynick',

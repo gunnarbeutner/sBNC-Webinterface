@@ -2,9 +2,8 @@
 	$LANG = array(
 			'menu_logout' => 'Abmelden',
 			'menu_index' => 'Übersicht',
-			'menu_password' => 'Passwort ändern',
 			'menu_settings' => 'Einstellungen',
-			'menu_traffic' => 'Traffic',
+			'menu_admin' => 'Admin',
 			'menu_log' => 'Awaylog',
 			
 			'index_welcome' => 'Willkommen, %s!',
@@ -12,8 +11,6 @@
 			'index_nick' => 'Dein derzeitiger Nickname ist <strong>%s</strong>, dein Awaynick ist <strong>%s</strong>.',
 			'index_server' => 'Du bist zum Server <strong>%s</strong> verbunden.',
 			'index_traffic' => 'Du hast bisher %s eingehenden Traffic und %s ausgehenden Traffic verursacht.',
-			'index_status' => 'Online-Status',
-			'index_statusimage' => 'Um in Foren, Blogs etc. deinen Onlinestatus im IRC anzuzeigen, kannst du folgende Grafik verwenden: <img src="/status/%s.gif" alt="Online-Status von %s" />',
 			'index_channels' => 'Kanäle',
 			
 			'settings_awaynick' => 'Awaynick',

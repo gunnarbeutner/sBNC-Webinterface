@@ -23,7 +23,7 @@ input, select {
 	background-color:#FFFFFF;
 	border:1px solid #CCCCCC;
 	font-size:1em;
-	width:500px;
+	width:700px;
 	min-height:20px;
 	display:block;
 	margin:8px 0px 16px 0px;
@@ -128,7 +128,7 @@ nav li{
 	float:left;
 	margin:0px;
 	padding:0px;
-	width:25%;
+	width:20%;
 }
 
 nav li a:link, nav li a:visited{
@@ -187,7 +187,7 @@ dd{
 #content{
 	margin:100px auto;
 	border:1px solid #CCCCCC;
-	width:510px;
+	width:710px;
 	padding:10px;
 	
 	-webkit-border-radius:10px;
