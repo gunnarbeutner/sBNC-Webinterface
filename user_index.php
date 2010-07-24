@@ -74,6 +74,6 @@
 <?php
 		require_once 'templates/footer.html';
 	} else {
-		header('Location: http://'.$_SERVER['HTTP_HOST'].pathinfo($_SERVER['REQUEST_URI'], PATHINFO_DIRNAME).'/', true, 307);
+		header('Location: http://'.$_SERVER['HTTP_HOST'].pathinfo($_SERVER['REQUEST_URI'], PATHINFO_DIRNAME), true, 307);
 	}
 ?>
