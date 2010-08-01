@@ -21,7 +21,7 @@
 				$breadcrumb = array($_SESSION['user'], 'Index');
 				
 				if (isset($_POST['lang']) && file_exists('lang/'.$_POST['lang'].'.php')) {
-					$sbnc->call("setlang", array($_POST['lang']));
+					$sbnc->call("setlanguage", array($_POST['lang']));
 					
 					$_SESSION['language'] = $_POST['lang'];
 					

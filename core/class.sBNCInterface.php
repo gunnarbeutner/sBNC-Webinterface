@@ -17,16 +17,12 @@
 			
 			if (!empty($this->config['bind']['ip'])) {
 				socket_bind($this->connection, $this->config['bind']['ip']);
-			} elseif (!empty($_SERVER['SERVER_ADDR'])) {
-				socket_bind($this->connection, $_SERVER['SERVER_ADDR']);
 			}
 			
 			if (!socket_connect($this->connection, $this->config['connection']['ip'], $this->config['connection']['port'])) {
-				Error::failure('Connection failure', array('Could not connect to server:', socket_strerror(socket_last_error())));
-				
 				$this->connection = false;
 				
-				return false;
+				Error::failure('Connection failure', array('Could not connect to server:', socket_strerror(socket_last_error())));
 			} else {
 				$this->write("RPC_IFACE");
 				
@@ -45,9 +41,11 @@
 		}
 		
 		public function __destruct() {
-			socket_write($this->connection, 'QUIT'."\n");
-			
-			socket_close($this->connection);
+			if (is_resource($this->connection)) {
+				socket_write($this->connection, 'QUIT'."\n");
+				
+				socket_close($this->connection);
+			}
 		}
 		
 		private function read() {

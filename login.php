@@ -7,7 +7,7 @@
 		$_SESSION['user'] = $_POST['user'];
 		$_SESSION['pass'] = $_POST['pass'];
 		
-		$lang = $sbnc->Call("getlang");
+		$lang = $sbnc->Call('gettag', array('lang'));
 		if (file_exists('lang/'.$lang.'.php')) {
 			$_SESSION['language'] = $lang;
 		} else {
