@@ -53,7 +53,7 @@ input.input:not(:focus) {
 }
 
 input.input:required {
-	background:url("img/asterisk_orange.png") #FFFFFF no-repeat 480px 7px;						
+	background:url("img/asterisk_orange.png") #FFFFFF no-repeat 680px 7px;						
 }
 
 input.submit {
