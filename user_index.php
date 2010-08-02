@@ -41,6 +41,7 @@
 					<p><?php printf($LANG['index_traffic'], Func::byte_format($traffic[2]+$traffic[0]), Func::byte_format($$traffic[3]+$traffic[1]) ); ?></p>
 <?php
 				$channels = $sbnc->call("getchannels");
+				
 				if (is_array($channels)) {
 ?>
 					
@@ -56,6 +57,25 @@
 					</ul>
 <?php
 				}
+				
+				/*
+				
+				Disabled because you can't make any calls when not authenticated. Maybe there will be a script delivered with this interface, which is able to show your status without needing to login.
+				
+				if (in_array('getstatus', $sbnc->commands)) {
+?>
+					
+					<h3><?php echo $LANG['index_status']; ?></h3>
+					
+					<p><?php printf($LANG['index_statusimage'], $_SESSION['user'], $nick); ?></p>
+					
+					<code>&lt;img src="http://<?php echo $path; ?>status.php?user=<?php echo $_SESSION['user']; ?>" alt="<?php echo $nick; ?> at sBNC" /&gt;</code>
+					<code>[img]http://<?php echo $path; ?>status.php?user=<?php echo $_SESSION['user']; ?>[/img]</code>
+<?php
+				}*/
+
+				
+				$lang = $sbnc->call('gettag', array('lang'));
 ?>
 					
 					<form action="user_index.php" method="post">
@@ -64,8 +84,8 @@
 							
 							<label for="lang">Select Language</label>
 							<select name="lang" id="lang">
-								<option value="de"<?php if ($sbnc->call('getlang') == 'de') { echo ' selected="selected"'; } ?>>Deutsch</option>
-								<option value="en"<?php if ($sbnc->call('getlang') == 'en') { echo ' selected="selected"'; } ?>>English</option>
+								<option value="de"<?php if ($lang == 'de') { echo ' selected="selected"'; } ?>>Deutsch</option>
+								<option value="en"<?php if ($lang == 'en') { echo ' selected="selected"'; } ?>>English</option>
 							</select>
 							
 							<input type="submit" value="Submit" class="submit" />
@@ -74,6 +94,6 @@
 <?php
 		require_once 'templates/footer.html';
 	} else {
-		header('Location: http://'.$_SERVER['HTTP_HOST'].pathinfo($_SERVER['REQUEST_URI'], PATHINFO_DIRNAME), true, 307);
+		header('Location: '.$path, true, 307);
 	}
 ?>
