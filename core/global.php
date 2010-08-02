@@ -24,4 +24,10 @@
 	} else {
 		$loggedin = false;
 	}
+	
+	$path = 'http://'.$_SERVER['HTTP_HOST'].pathinfo($_SERVER['REQUEST_URI'], PATHINFO_DIRNAME);
+	
+	if (substr($path, -1) != '/'){
+		$path .= '/';
+	}
 ?>

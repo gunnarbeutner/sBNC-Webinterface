@@ -12,6 +12,8 @@
 			'index_server' => 'You are connected to Server <strong>%s</strong>.',
 			'index_traffic' => 'Traffic: Incoming %s, Outgoing %s',
 			'index_channels' => 'Channels',
+			'index_status' => 'Online-Status',
+			'index_statusimage' => 'You are able to show your Status using the following image: <img src="'.pathinfo($_SERVER['REQUEST_URI'], PATHINFO_DIRNAME).'status.php?user=%s" alt="Online-Status of %s" />',
 			
 			'settings_awaynick' => 'Awaynick',
 			'settings_awaynick_changed' => 'Awaynick was changed to <strong>%s</strong>.',

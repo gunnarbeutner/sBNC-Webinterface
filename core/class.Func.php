@@ -1,6 +1,10 @@
 <?php
 	class Func{
 		public static function duration($secs) {
+			if ($secs < 1) {
+				return '0s';
+			}
+			
 			$vals = array(
 					'w' => (int) ($secs / 86400 / 7),
 					'd' => $secs / 86400 % 7,

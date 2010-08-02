@@ -12,6 +12,9 @@
 			'index_server' => 'Du bist zum Server <strong>%s</strong> verbunden.',
 			'index_traffic' => 'Du hast bisher %s eingehenden Traffic und %s ausgehenden Traffic verursacht.',
 			'index_channels' => 'Kanäle',
+			'index_status' => 'Online-Status',
+			'index_statusimage' => 'Um in Foren, Blogs etc. deinen Onlinestatus im IRC anzuzeigen, kannst du folgende Grafik verwenden: <img src="'.pathinfo($_SERVER['REQUEST_URI'], PATHINFO_DIRNAME).'status.php?user=%s" alt="Online-Status von %s" />',
+
 			
 			'settings_awaynick' => 'Awaynick',
 			'settings_awaynick_changed' => 'Der Awaynick wurde auf <strong>%s</strong> geändert.',

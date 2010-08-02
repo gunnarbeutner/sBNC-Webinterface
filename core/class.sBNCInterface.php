@@ -4,6 +4,7 @@
 		private $itype = false;
 		
 		private $config = array();
+		public $commands = array();
 		
 		private $user = '';
 		private $pass = '';
@@ -118,6 +119,8 @@
 			$call = $this->call('commands');
 			
 			if ($call != 'RPC_INVALIDUSERPASS') {
+				$this->commands = $call;
+				
 				return true;
 			} else {
 				$this->user = '';

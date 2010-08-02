@@ -1,8 +1,6 @@
 <?php
 	require_once 'core/global.php';
 	
-	$path = pathinfo($_SERVER['REQUEST_URI'], PATHINFO_DIRNAME);
-	
 	if (isset($_POST['user'], $_POST['pass']) && $sbnc->login($_POST['user'], $_POST['pass'])) {
 		$_SESSION['user'] = $_POST['user'];
 		$_SESSION['pass'] = $_POST['pass'];
@@ -16,8 +14,8 @@
 		
 		unset($sbnc);
 		
-		header('Location: http://'.$_SERVER['HTTP_HOST'].$path.'user_index.php');
+		header('Location: '.$path.'user_index.php', true, 307);
 	} else {
-		header('Location: http://'.$_SERVER['HTTP_HOST'].$path);
+		header('Location: '.$path, true, 307);
 	}
 ?>
