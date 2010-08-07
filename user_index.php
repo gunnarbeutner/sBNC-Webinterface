@@ -18,20 +18,23 @@
 					$server .= ':'.$port;
 				}
 				
-				$breadcrumb = array($_SESSION['user'], 'Index');
-				
 				if (isset($_POST['lang']) && file_exists('lang/'.$_POST['lang'].'.php')) {
 					$sbnc->call("setlanguage", array($_POST['lang']));
 					
 					$_SESSION['language'] = $_POST['lang'];
 					
 					require 'lang/'.$_SESSION['language'].'.php';
+					
+					$breadcrumb = array($_SESSION['user'], $LANG['menu_index']);
+					
 					require_once 'templates/header.html';
 ?>
 					<h3><?php echo $LANG['lang_changed']; ?></h3>
 					<p><?php echo $LANG['lang_changed_text']; ?></p>
 <?php
 				} else {
+					$breadcrumb = array($_SESSION['user'], $LANG['menu_index']);
+					
 					require_once 'templates/header.html';
 				}
 ?>
@@ -88,7 +91,7 @@
 								<option value="en"<?php if ($lang == 'en') { echo ' selected="selected"'; } ?>>English</option>
 							</select>
 							
-							<input type="submit" value="Submit" class="submit" />
+							<input type="submit" value="<?php echo $LANG['form_submit']; ?>" class="submit" />
 						</fieldset>
 					</form>
 <?php
