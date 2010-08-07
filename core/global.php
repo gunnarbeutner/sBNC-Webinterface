@@ -30,4 +30,16 @@
 	if (substr($path, -1) != '/'){
 		$path .= '/';
 	}
+	
+	if ($sbnc->call('getvalue', array('admin')) == 1) {
+		if (!empty($_SERVER['SERVER_ADDR'])) {
+			if ($sbnc->call('istrustedip', array($_SERVER['SERVER_ADDR'])) != 1) {
+				$sbnc->call('addtrustedip', array($_SERVER['SERVER_ADDR']));
+			}
+		} else {
+			if (count($sbnc->call('gettrustedips')) == 0) {
+				Error::warn('Trusted IP missing', array('You didn\'t add a trusted IP to sBNC and i wasnt able add your servers IP to sBNC', 'Please type the following into your client on IRC when connected to sBNC', '<code>/sbnc tcl iface-trust:addtrustedip &lt;your webservers IP&gt;</code>'));
+			}
+		}
+	}
 ?>
