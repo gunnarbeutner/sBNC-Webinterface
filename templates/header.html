@@ -28,9 +28,9 @@
 				<li><a href="user_settings.php"><?php echo $LANG['menu_settings']; ?></a></li>
 				<li><a href="user_log.php"><?php echo $LANG['menu_log']; ?></a></li>
 				<li><a href="logout.php"><?php echo $LANG['menu_logout']; ?></a></li>
-<!-- IF is_admin() -->
+<?php if ($sbnc->call('getvalue', array('admin')) == 1) { ?>
 				<li><a href="admin.php"><?php echo $LANG['menu_admin']; ?></a></li>
-<!-- ENDIF -->
+<?php } ?>
 			</ul>
 			<br>
 		</nav>
