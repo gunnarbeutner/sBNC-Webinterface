@@ -194,3 +194,9 @@ dd{
 	-moz-border-radius:10px;
 	border-radius:10px;
 }
+
+.awaylog p{
+	padding:0px 0px 0px 50px;
+	margin:0px;
+	text-indent:-50px;
+}
