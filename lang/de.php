@@ -5,6 +5,10 @@
 			'menu_settings'                 => 'Einstellungen',
 			'menu_admin'                    => 'Admin',
 			'menu_log'                      => 'Awaylog',
+			'menu_admin_userlist'           => 'Benutzerliste',
+			'menu_admin_trust'              => 'Trusted IPs',
+			'menu_admin_tags'               => 'Einstellungen',
+			'menu_admin_mainlog'            => 'Mainlog',
 			
 			'index_welcome'                 => 'Willkommen, %s!',
 			'index_uptime'                  => 'Du bist seit <strong>%s</strong> im IRC unterwegs.',
@@ -52,6 +56,8 @@
 			'lang_changed'                  => 'Sprache geändert',
 			'lang_changed_text'             => 'Die Sprache wurde auf <strong>Deutsch</strong> geändert.',
 			
-			'form_submit'                   => 'Absenden'
+			'form_submit'                   => 'Absenden',
+			
+			'admin_userlist'                => 'Benutzerliste'
 		);
 ?>
