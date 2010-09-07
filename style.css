@@ -42,10 +42,6 @@ input.input:focus {
 	-webkit-box-shadow:0 0 25px #CCCCCC;
 	-moz-box-shadow:0 0 25px #CCCCCC;
 	box-shadow:0 0 25px #CCCCCC;
-	
-	-webkit-transform: scale(1.05);
-	-moz-transform: scale(1.05);
-	transform: scale(1.05);
 }
 
 input.input:not(:focus) {
