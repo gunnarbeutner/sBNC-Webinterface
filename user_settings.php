@@ -150,10 +150,5 @@
 		</fieldset>
 	</form>
 <?php
-	echo '<pre>';
-	print_r($sbnc->commands);
-	print_r($LANG);
-	echo '</pre>';
-		
 	require_once 'templates/footer.html';
 ?>
