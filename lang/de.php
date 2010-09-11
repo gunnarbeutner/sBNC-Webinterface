@@ -37,7 +37,7 @@
 			'settings_serverpass_changed'   => 'Das Passwort des IRC-Servers wurde auf <strong>%s</strong> geändert.',
 			
 			'settings_awaynick'             => 'Awaynick',
-			'settings_awaynick_placeholder' => 'Der Awaynick  wird gesetzt, sobald du vom Bouncer disconnectest.',
+			'settings_awaynick_placeholder' => 'Der Awaynick wird gesetzt, sobald du vom Bouncer disconnectest.',
 			'settings_awaynick_changed'     => 'Der Awaynick wurde auf <strong>%s</strong> geändert.',
 			
 			'settings_away'                 => 'Abwesenheitsnachricht',
