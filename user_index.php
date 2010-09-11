@@ -22,7 +22,7 @@
 		$server .= ':'.$port;
 	}
 				
-	if (isset($_POST['lang']) && file_exists('lang/'.$_POST['lang'].'.php')) {
+	if (isset($_POST['lang']) && preg_match('/^[a-z]+$/', $_POST['lang']) && file_exists('lang/'.$_POST['lang'].'.php')) {
 		$sbnc->call("setlanguage", array($_POST['lang']));
 					
 		$_SESSION['language'] = $_POST['lang'];
