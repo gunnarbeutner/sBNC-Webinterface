@@ -25,7 +25,6 @@
 	}
 		
 	$log = $sbnc->call("getlog", array("0", "end"));
-	$irc2html = new IRCtoHTML();
 
 	if (is_array($log)) {
 ?>
@@ -40,9 +39,9 @@
 		<div class="awaylog">
 <?php
 		foreach ($log as $line) {
-			$irc2html->IRCtoHTML(utf8_decode($line));
+			$irc2html = new IRCtoHTML(utf8_decode($line));
 ?>
-			<p><?php echo $irc2html->getHTML(); ?></p>
+			<p><?php echo $irc2html->GetHTML(); ?></p>
 <?php
 		}
 ?>

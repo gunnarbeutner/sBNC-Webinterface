@@ -24,7 +24,7 @@
 			'settings_vhost_changed'        => 'Die vHost wurde auf <strong>%s</strong> geändert.',
 			
 			'settings_server'               => 'IRC-Server',
-			'settings_server_placeholder'   => 'Die Adresse des IRC-Servers, zu den sBNC verbinden soll.',
+			'settings_server_placeholder'   => 'Die Adresse des IRC-Servers, zu den shroudBNC verbinden soll.',
 			'settings_server_changed'       => 'Die Adresse des IRC-Servers wurde auf <strong>%s</strong> geändert.',
 			
 			'settings_serverpass'           => 'IRC-Server-Passwort',

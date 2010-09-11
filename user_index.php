@@ -76,7 +76,7 @@
 					
 		<p><?php printf($LANG['index_statusimage'], $_SESSION['user'], $nick); ?></p>
 					
-		<code>&lt;img src="http://<?php echo $path; ?>status.php?user=<?php echo $_SESSION['user']; ?>" alt="<?php echo $nick; ?> at sBNC" /&gt;</code>
+		<code>&lt;img src="http://<?php echo $path; ?>status.php?user=<?php echo $_SESSION['user']; ?>" alt="<?php echo $nick; ?> at shroudBNC" /&gt;</code>
 		<code>[img]http://<?php echo $path; ?>status.php?user=<?php echo $_SESSION['user']; ?>[/img]</code>
 <?php
 	}*/
