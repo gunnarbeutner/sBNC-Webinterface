@@ -12,8 +12,8 @@
 			'index_server'                  => 'You are connected to server <strong>%s</strong>.',
 			'index_traffic'                 => 'Traffic: Incoming %s, Outgoing %s',
 			'index_channels'                => 'Channels',
-			'index_status'                  => 'Online-Status',
-			'index_statusimage'             => 'You are able to show your Status using the following image: <img src="'.pathinfo($_SERVER['REQUEST_URI'], PATHINFO_DIRNAME).'status.php?user=%s" alt="Online-Status of %s" />',
+			'index_status'                  => 'Online Status',
+			'index_statusimage'             => 'You are able to show your status using the following image: <img src="'.pathinfo($_SERVER['REQUEST_URI'], PATHINFO_DIRNAME).'status.php?user=%s" alt="Online-Status of %s" />',
 			
 			'settings_realname'             => 'Real Name',
 			'settings_realname_placeholder' => 'Name of Bouncer owner',
@@ -25,12 +25,12 @@
 			'settings_vhost_default'	=> 'Default vHost',
 			
 			'settings_server'               => 'IRC Server',
-			'settings_server_placeholder'   => 'The IRC Server to connect to',
-			'settings_server_changed'       => 'IRC Server was changed to <strong>%s</strong>.',
+			'settings_server_placeholder'   => 'The IRC server to connect to',
+			'settings_server_changed'       => 'IRC server was changed to <strong>%s</strong>.',
 			
 			'settings_serverpass'           => 'IRC Server Password',
-			'settings_serverpass_placeholder' => 'Password of IRC Server, if needed',
-			'settings_serverpass_changed'   => 'IRC Server Password was changed to <strong>%s</strong>.',
+			'settings_serverpass_placeholder' => 'Password of IRC server, if needed',
+			'settings_serverpass_changed'   => 'IRC server password was changed to <strong>%s</strong>.',
 			
 			'settings_awaynick'             => 'Awaynick',
 			'settings_awaynick_placeholder' => 'Awaynick will be set upon disconnection',
@@ -51,7 +51,7 @@
 			'log_prompt'                    => 'Erase log',
 			
 			'lang_changed'                  => 'Language changed',
-			'lang_changed_text'             => 'Language was changed to <strong>english</strong>.',
+			'lang_changed_text'             => 'Language was changed to <strong>English</strong>.',
 			
 			'form_submit'                   => 'Submit'
 		);
