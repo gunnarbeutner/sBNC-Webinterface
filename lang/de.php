@@ -26,6 +26,7 @@
 			'settings_vhost'                => 'vHost',
 			'settings_vhost_placeholder'    => 'vHost des Bouncers, leerlassen für Standard.',
 			'settings_vhost_changed'        => 'Die vHost wurde auf <strong>%s</strong> geändert.',
+			'settings_vhost_default'	=> 'Standard-vHost',
 			
 			'settings_server'               => 'IRC-Server',
 			'settings_server_placeholder'   => 'Die Adresse des IRC-Servers, zu den shroudBNC verbinden soll.',

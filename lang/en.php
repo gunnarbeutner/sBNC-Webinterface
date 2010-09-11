@@ -8,8 +8,8 @@
 			
 			'index_welcome'                 => 'Welcome, %s!',
 			'index_uptime'                  => 'You are connected to IRC for <strong>%s</strong>.',
-			'index_nick'                    => 'Your current Nick is <strong>%s</strong>, Awaynick is <strong>%s</strong>.',
-			'index_server'                  => 'You are connected to Server <strong>%s</strong>.',
+			'index_nick'                    => 'Your current nick is <strong>%s</strong>, awaynick is <strong>%s</strong>.',
+			'index_server'                  => 'You are connected to server <strong>%s</strong>.',
 			'index_traffic'                 => 'Traffic: Incoming %s, Outgoing %s',
 			'index_channels'                => 'Channels',
 			'index_status'                  => 'Online-Status',
@@ -22,12 +22,13 @@
 			'settings_vhost'                => 'vHost',
 			'settings_vhost_placeholder'    => 'vHost of bouncer, leave empty for default',
 			'settings_vhost_changed'        => 'vHost was changed to <strong>%s</strong>.',
+			'settings_vhost_default'	=> 'Default vHost',
 			
 			'settings_server'               => 'IRC Server',
 			'settings_server_placeholder'   => 'The IRC Server to connect to',
 			'settings_server_changed'       => 'IRC Server was changed to <strong>%s</strong>.',
 			
-			'settings_serverpass'           => 'IRC Server Passwort',
+			'settings_serverpass'           => 'IRC Server Password',
 			'settings_serverpass_placeholder' => 'Password of IRC Server, if needed',
 			'settings_serverpass_changed'   => 'IRC Server Password was changed to <strong>%s</strong>.',
 			

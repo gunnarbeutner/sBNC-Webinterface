@@ -122,9 +122,48 @@
 							
 			<label for="realname" class="left"><?php echo $LANG['settings_realname']; ?></label>
 			<input type="text" name="realname" id="realname" value="<?php echo htmlspecialchars($realname); ?>" placeholder="<?php echo $LANG['settings_realname_placeholder']; ?>" title="<?php echo $LANG['settings_realname_placeholder']; ?>" /><br />
-			
+
 			<label for="vhost" class="left"><?php echo $LANG['settings_vhost']; ?></label>
+			
+<?php
+	$vhosts_info = $sbnc->call("getvhosts", array());
+	$is_admin = $sbnc->call("getvalue", array("admin"));
+
+	if (is_array($vhosts_info) && !(bool)$is_admin) {
+		$vhost_fqdn = null;
+
+		foreach ($vhosts_info as $vhost_info) {
+			if ($vhost_info[0] == $vhost) {
+				$vhost_fqdn = $vhost_info[3];
+			}
+		}
+
+		$vhost_value = ($vhost_fqdn != null) ? $vhost_fqdn : $vhost;
+?>
+			<select name="vhost" id="vhost" value="<?php echo $vhost_value; ?>" placeholder="<?php echo $LANG['settings_vhost_placeholder']; ?>" title="<?php echo $LANG['settings_vhost_placeholder']; ?>" />
+<?php
+
+		if ($vhost_fqdn == null) {
+			$vhost_text = ($vhost != '') ? $vhost : $LANG['settings_vhost_default'];
+?>
+				<option value="<?php echo $vhost; ?>"><?php echo $vhost_text; ?></option>
+<?php
+		}
+
+		foreach ($vhosts_info as $vhost_info) {
+?>
+				<option value="<?php echo $vhost_info[0]; ?>"><?php echo $vhost_info[3]; ?></option>
+<?php
+		}
+?>
+			</select><br />
+<?php
+	} else {
+?>
 			<input type="text" name="vhost" id="vhost" value="<?php echo $vhost; ?>" placeholder="<?php echo $LANG['settings_vhost_placeholder']; ?>" title="<?php echo $LANG['settings_vhost_placeholder']; ?>" /><br />
+<?php
+	}
+?>
 		</fieldset>
 
 		<fieldset>
