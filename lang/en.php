@@ -48,7 +48,7 @@
 			'settings_password_changed'     => 'Password was changed to <strong>%s</strong>.',
 			
 			'log_erased'                    => 'Log was erased.',
-			'log_prompt'                    => 'Empty log',
+			'log_prompt'                    => 'Erase log',
 			
 			'lang_changed'                  => 'Language changed',
 			'lang_changed_text'             => 'Language was changed to <strong>english</strong>.',
